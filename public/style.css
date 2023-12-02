@@ -1,0 +1,127 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic styling for the body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Style the main container */
+  #app-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Style the room creation and join sections */
+  #room-create, #room-join {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #room-create h2, #room-join h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #room-create input, #room-join input, #room-create button, #room-join button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  #room-create button, #room-join button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #room-create button:hover, #room-join button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style the video and chat container */
+  #video-container, #chat-container {
+    display: none;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #local-video, #remote-video {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #000;
+  }
+  
+  #local-username, #remote-username {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  #chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  #chat-input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  #send-button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  #send-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Show the video and chat container when needed */
+  #room-create.active, #room-join.active {
+    display: none;
+  }
+  
+  #video-container.active, #chat-container.active {
+    display: block;
+  }
+  

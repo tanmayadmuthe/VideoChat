@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Video Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <div id="room-create">
+            <h2>Create a Room</h2>
+            <input type="text" id="room-name" placeholder="Enter room name">
+            <button id="create-room-button">Create Room</button>
+        </div>
+        <div id="room-join">
+            <h2>Join a Room</h2>
+            <input type="text" id="join-room-name" placeholder="Enter room name">
+            <button id="join-room-button">Join Room</button>
+        </div>
+        <div id="video-container">
+            <div id="local-video">
+                <video autoplay muted></video>
+                <div id="local-username">You</div>
+            </div>
+            <div id="remote-video">
+                <video autoplay></video>
+                <div id="remote-username">Remote User</div>
+            </div>
+        </div>
+        <div id="chat-container">
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Type a message">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
